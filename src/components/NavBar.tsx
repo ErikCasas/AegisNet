@@ -13,7 +13,6 @@ import { useState } from "react";
 export const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Función para abrir/cerrar el menú
   const toggleDrawer = (open: boolean) => () => {
     setIsOpen(open);
   };
@@ -21,7 +20,16 @@ export const NavBar: React.FC = () => {
   const menuItems = ["Inicio", "Servicios", "Acerca de", "Contacto"];
   return (
     <>
-      <AppBar>
+      <AppBar
+        position="sticky"
+        sx={{
+          margin: 0,
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000,
+        }}
+      >
         <Toolbar>
           <IconButton
             edge="start"
