@@ -1,9 +1,11 @@
 import React from "react";
-import { Grid, Card, CardContent, Typography } from "@mui/material";
+import { Grid, Card, CardContent } from "@mui/material";
 import { NetworkMenu } from "../components/NetworkMenu";
 import PieHealthOverView from "../components/PieHealthOverview";
 import { AlertsTable } from "../components/AlertsTable";
 import { MapNodesCenter } from "../components/MapNodesCenters";
+import { NetworkTopology } from "../components/NetworkTopology";
+import { PhoneNumbersTable } from "../components/PhoneNumbersTable";
 
 const DashBoardPage: React.FC = () => {
   return (
@@ -54,18 +56,16 @@ const DashBoardPage: React.FC = () => {
           </Grid>
           <Grid item sx={{ height: "50%" }}>
             <Card sx={{ height: "100%" }}>
-              <CardContent>
-                <Typography variant="h6">Columna 3 - Card 2</Typography>
-              </CardContent>
+              <CardContent>{/* <NetworkTopology /> */}</CardContent>
             </Card>
           </Grid>
         </Grid>
       </Grid>
 
       <Grid item xs={2} sx={{ height: "100%" }}>
-        <Card sx={{ height: "100%" }}>
+        <Card sx={{ height: "100%", overflowY: "scroll" }}>
           <CardContent>
-            <Typography variant="h6">Columna 4</Typography>
+            <PhoneNumbersTable />
           </CardContent>
         </Card>
       </Grid>
