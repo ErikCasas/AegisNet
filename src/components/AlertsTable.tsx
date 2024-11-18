@@ -77,7 +77,7 @@ const alertsData: Alert[] = [
   },
 ];
 
-export default function AlertsTable() {
+export const AlertsTable = () => {
   return (
     <Box sx={{ width: "100%" }}>
       <Table stickyHeader sx={{ minWidth: 650 }} aria-label="alerts table">
@@ -100,4 +100,4 @@ export default function AlertsTable() {
       </Table>
     </Box>
   );
-}
+};
