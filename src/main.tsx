@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<h1>Holaa</h1>}>
+      <Suspense fallback={<h1>Cargando...</h1>}>
         <App />
       </Suspense>
     </BrowserRouter>
