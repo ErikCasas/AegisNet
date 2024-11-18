@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
 import { NetworkMenu } from "../components/NetworkMenu";
 import PieHealthOverView from "../components/PieHealthOverview";
+import AlertsTable from "../components/Alertstable";
 
 const DashBoardPage: React.FC = () => {
   return (
@@ -34,10 +35,8 @@ const DashBoardPage: React.FC = () => {
             </Card>
           </Grid>
           <Grid item sx={{ height: "50%" }}>
-            <Card sx={{ height: "100%" }}>
-              <CardContent>
-                <Typography variant="h6">Columna 2 - Card 2</Typography>
-              </CardContent>
+            <Card sx={{ height: "100%", overflowY: "auto" }}>
+              <AlertsTable />
             </Card>
           </Grid>
         </Grid>
