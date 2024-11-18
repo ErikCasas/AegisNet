@@ -27,6 +27,7 @@ export const NavBar: React.FC = () => {
   const menuItems = [
     { title: "Dashboard", route: AppRoutes.Dashboard },
     { title: "Suplier Help Desk", route: AppRoutes.SupplierHelpDeskPage },
+    { title: "Remote conecctions", route: AppRoutes.RemoteAssistancePage },
   ];
   return (
     <>

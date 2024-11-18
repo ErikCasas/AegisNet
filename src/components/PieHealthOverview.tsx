@@ -13,7 +13,7 @@ export default function PieHealthOverView() {
   return (
     <Box sx={{ width: "100%" }}>
       <PieChart
-        height={400}
+        height={350}
         series={[
           {
             data: nodeStatusData.slice(0, 5),

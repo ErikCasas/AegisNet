@@ -6,7 +6,7 @@ const DashBoardPage = lazy(() => import("./pages/DashboardPage"));
 const HelpDeskAegisnet = lazy(() => import("./pages/HelpDeskAegisnet"));
 const NodesInformation = lazy(() => import("./pages/NodesInformation"));
 const SupplierHelpDeskPage = lazy(() => import("./pages/SupplierHelpDeskPage"));
-const RemoteAssistancePage = lazy(() => import("./pages/RemoteAssistancePage"));
+const RemoteAssistancePage = lazy(() => import("./pages/RemoteConnectionPage"));
 const Page404 = lazy(() => import("./pages/Page404"));
 
 export const Router: React.FC = () => {
