@@ -1,12 +1,11 @@
 import React from "react";
-import { Grid, Card, CardContent } from "@mui/material";
+import { Grid, Card, CardContent, Box } from "@mui/material";
 import { NetworkMenu } from "../components/NetworkMenu";
 import PieHealthOverView from "../components/PieHealthOverview";
 import { AlertsTable } from "../components/AlertsTable";
 import { MapNodesCenter } from "../components/MapNodesCenters";
-import { NetworkTopology } from "../components/NetworkTopology";
 import { PhoneNumbersTable } from "../components/PhoneNumbersTable";
-
+import topologyImage from "../../public/topologias.jpg";
 const DashBoardPage: React.FC = () => {
   return (
     <Grid
@@ -56,7 +55,15 @@ const DashBoardPage: React.FC = () => {
           </Grid>
           <Grid item sx={{ height: "50%" }}>
             <Card sx={{ height: "100%" }}>
-              <CardContent>{/* <NetworkTopology /> */}</CardContent>
+              <Box
+                component="img"
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                }}
+                alt="This isn´t a image"
+                src={topologyImage}
+              />
             </Card>
           </Grid>
         </Grid>

@@ -36,16 +36,16 @@ const RemoteConnectionPage = () => {
 
   return (
     <Box sx={{ maxWidth: "100%", padding: 4 }}>
+      <Typography variant="h4" gutterBottom>
+        Remote Device Connection
+      </Typography>
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
         }}
       >
-        <Box sx={{ width: "40%" }}>
-          <Typography variant="h4" gutterBottom>
-            Remote Device Connection
-          </Typography>
+        <Box sx={{ width: "40%", display: "flex", alignItems: "center" }}>
           <TextField
             label="Device ID"
             variant="outlined"
@@ -55,6 +55,7 @@ const RemoteConnectionPage = () => {
           />
           <Button
             variant="contained"
+            sx={{ padding: 2 }}
             color="primary"
             onClick={handleConnectClick}
           >
@@ -67,6 +68,9 @@ const RemoteConnectionPage = () => {
           marginTop={4}
           bgcolor="#cccccc"
           maxWidth="min-content"
+          borderRadius={2}
+          padding={2}
+          marginLeft={4}
         >
           Your Device: 9552749134
         </Typography>
