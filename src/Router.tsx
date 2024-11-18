@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import { AppRoutes } from "./types";
 
 const DashBoardPage = lazy(() => import("./pages/DashboardPage"));
 const HelpDeskAegisnet = lazy(() => import("./pages/HelpDeskAegisnet"));
@@ -11,11 +12,17 @@ const Page404 = lazy(() => import("./pages/Page404"));
 export const Router: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<DashBoardPage />} />
-      <Route path="/supplier-help-desk" element={<SupplierHelpDeskPage />} />
-      <Route path="/help-desk-aegisnet" element={<HelpDeskAegisnet />} />
-      <Route path="/remote-assistance" element={<RemoteAssistancePage />} />
-      <Route path="/nodes-information" element={<NodesInformation />} />
+      <Route path={AppRoutes.Dashboard} element={<DashBoardPage />} />
+      <Route
+        path={AppRoutes.SupplierHelpDeskPage}
+        element={<SupplierHelpDeskPage />}
+      />
+      <Route path={AppRoutes.HelpDeskAegisnet} element={<HelpDeskAegisnet />} />
+      <Route
+        path={AppRoutes.RemoteAssistancePage}
+        element={<RemoteAssistancePage />}
+      />
+      <Route path={AppRoutes.NodesInformation} element={<NodesInformation />} />
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
